@@ -1,0 +1,211 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    /* background: #081b29; */
+    color: white;
+}
+.logo{
+    position: relative;
+   font-size: 25px ;
+   color: white;
+   text-decoration: none;
+   font-weight: 600;
+} 
+.logo::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background:#081b29; 
+    animation: showRight 1s ease forwards; 
+    animation-delay: .4s;
+
+}
+.header{
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     padding: 20px 10%;
+     background: transparent;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     z-index: 100;
+
+}
+.navbar a{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+}
+.navbar a:hover, .navbar a.active{
+    color: lightskyblue;
+}
+.home{
+    display: flex;
+    height: 110vh;
+    align-items: center;
+    padding: 0 10% ;
+    background: url('imagelogo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home-content{
+    max-width: 600px;
+    margin: 20px 0px 40px;
+}
+.home-content h1{
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2; /*it reduces the space between the lines aboe an below  */
+}
+.home-content h1::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background:#081b29; 
+    animation: showRight 1s ease forwards; 
+    animation-delay: 1s;
+
+}
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    color: lightskyblue  ;
+}
+.home-content p{
+    font-size: 17px;
+    margin: 20px 0 40px;
+}
+.home-content .btn-box{
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+    margin-top: 33px;
+}
+.btn-box a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: lightskyblue;
+    border: 2px solid lightskyblue;
+    border-radius:8px ;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    transition: .5s;
+    overflow: hidden;
+}
+.btn-box a:nth-child(2){
+    background: transparent;
+    color: lightskyblue;
+}
+.btn-box a::before{
+    /* before is a pseudo element . What it does is that it is a inline
+    element and it will go before the content of the a tag . You can style 
+    this before element separately from the rest of the a element/ ; */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+.btn-box a:hover::before{
+    width: 100%;
+}
+.btn-box a:nth-child(2)::before{
+    background:lightskyblue
+}
+.btn-box a:nth-child(2):hover{
+    color: #081b29;;
+}
+.btn-box a:nth-child(1):hover{
+    color: lightskyblue;
+}
+.home-sci{
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex ;
+    justify-content: space-between;
+}
+.home-sci a{
+    display: inline-flex;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid lightskyblue;
+    border-radius: 50%;
+    color: lightskyblue;
+    font-size: 20px ;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: .5s;
+}
+.home-sci a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: lightskyblue;
+    z-index: -1;
+    transition: .5s;
+}
+.home-sci a:hover::before{
+    width: 100%;
+}
+.home-sci a:hover{
+    color: #081b29;
+}
+
+.home-imgHover{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 500px;
+    height: 100%;
+    background: transparent;
+    /* border: 2px solid red; */
+    transition: 3s;
+}
+.home-imgHover:hover{
+   background: #081b29;
+   opacity: .8;
+}
+
+/* KEYFRAMES ANIMATION */
+@keyframes showRight {
+    100%{
+        width: 0 ;
+    }
+}
